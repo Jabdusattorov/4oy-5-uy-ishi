@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(0, 0, 0, 0.905);
+    font-family: sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+    ul{
+        display: flex;
+        list-style: none;
+        width: 60%;
+        justify-content: space-between;
+        li{
+            a{
+                text-decoration: none;
+                color: white;
+                padding: 10px;
+                font-size: larger;
+                border-radius: 3px;
+                transition: all 0.2s linear;
+                &:hover{
+                    background-color: rgba(255, 255, 255, 0.309);
+                    color: white;
+                }
+            }
+        }
+        .a{
+            a{
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+    .search{
+        width: 30%;
+        border: none;
+        border-bottom: 3px solid darkgrey;
+        background-color: transparent;
+        padding: 10px;
+        color: white;
+        outline: none;
+    }
+}
+.table{
+    width: 100%;
+    color: white;
+    border: 1px solid white;
+    border-collapse: collapse;
+    tr{
+        transition: all 0.2s linear;
+        &:hover{
+            background-color: rgb(213, 213, 213);
+            color: black;
+        }
+        th{
+            font-size: larger;
+            border: 1px solid white;
+}
+        td{
+            text-align: center;
+            border: 1px solid;
+            padding: 15px;
+            font-size: large;
+            transition: all 0.1s linear;
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.65);
+                color: white;
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    nav{
+        display: block;
+        padding: 20px;
+        ul{
+            width: 100%;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0px;
+            gap: 20px;
+        }
+        .search{
+            width: 100%;
+        }
+    }
+    table{
+        tr{
+            padding-top: 30px;
+            td{
+                display: block;
+                width: 100%;
+            }
+            td:nth-child(8n+8){
+                margin-bottom: 100px;
+            }
+        }
+        .head{
+            display: none;
+        }
+    }
+    ::-webkit-input-placeholder{
+        text-align: center;
+        font-size: large;
+    }
+}
+
+::-webkit-input-placeholder{
+    color: white;
+}
